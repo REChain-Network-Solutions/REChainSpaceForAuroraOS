@@ -15,7 +15,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(Qt5Network)
 
 %description
-Welcome to the REChain Internet, a revolutionary decentralized and fully distributed network.
+Welcome to the REChain Internet, a revolutionary decentralized network.
 
 %prep
 %autosetup

@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = com.rechain.space1.0.0
-DISTDIR = /home/sorydev/rechainspace/.tmp/com.rechain.space1.0.0
+DISTDIR = /home/sorydev/REChainSpaceForAuroraOS/.tmp/com.rechain.space1.0.0
 LINK          = g++
 LFLAGS        = -Wl,--as-needed -specs=/usr/lib/rpm/aurora/pie-pic-ld -Wl,-z,relro,-z,now -Wl,--no-as-needed -Wl,-rpath,'/usr/$$LIB/cef' -Wl,-O1 -Wl,-rpath,/usr/share/com.rechain.space/lib
 LIBS          = $(SUBLIBS) -laurorawebview -Wl,--no-as-needed /usr/lib64/cef/libcef.so -Wl,--as-needed -Wl,-rpath,/usr/lib64/cef -pie -rdynamic -lauroraapp -lappdir-cpp -lappdir -lappmanifest-glib -lglib-2.0 -pie -rdynamic -lmdeclarativecache5 -lQt5Quick -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -lGLESv2 -lpthread 
@@ -439,7 +439,7 @@ WebViewBrowser.o: src/WebViewBrowser.cpp
 
 install_qml: first FORCE
 	@test -d $(INSTALL_ROOT)/usr/share/com.rechain.space || mkdir -p $(INSTALL_ROOT)/usr/share/com.rechain.space
-	-$(INSTALL_DIR) /home/sorydev/rechainspace/qml $(INSTALL_ROOT)/usr/share/com.rechain.space/
+	-$(INSTALL_DIR) /home/sorydev/REChainSpaceForAuroraOS/qml $(INSTALL_ROOT)/usr/share/com.rechain.space/
 
 uninstall_qml: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/usr/share/com.rechain.space/qml
@@ -458,7 +458,7 @@ uninstall_target: FORCE
 
 install_desktop: first FORCE
 	@test -d $(INSTALL_ROOT)/usr/share/applications || mkdir -p $(INSTALL_ROOT)/usr/share/applications
-	-$(INSTALL_FILE) /home/sorydev/rechainspace/com.rechain.space.desktop $(INSTALL_ROOT)/usr/share/applications/
+	-$(INSTALL_FILE) /home/sorydev/REChainSpaceForAuroraOS/com.rechain.space.desktop $(INSTALL_ROOT)/usr/share/applications/
 
 uninstall_desktop: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/usr/share/applications/com.rechain.space.desktop
@@ -467,7 +467,7 @@ uninstall_desktop: FORCE
 
 install_icon86x86: first FORCE
 	@test -d $(INSTALL_ROOT)/usr/share/icons/hicolor/86x86/apps || mkdir -p $(INSTALL_ROOT)/usr/share/icons/hicolor/86x86/apps
-	-$(INSTALL_FILE) /home/sorydev/rechainspace/icons/86x86/com.rechain.space.png $(INSTALL_ROOT)/usr/share/icons/hicolor/86x86/apps/
+	-$(INSTALL_FILE) /home/sorydev/REChainSpaceForAuroraOS/icons/86x86/com.rechain.space.png $(INSTALL_ROOT)/usr/share/icons/hicolor/86x86/apps/
 
 uninstall_icon86x86: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/usr/share/icons/hicolor/86x86/apps/com.rechain.space.png
@@ -476,7 +476,7 @@ uninstall_icon86x86: FORCE
 
 install_icon108x108: first FORCE
 	@test -d $(INSTALL_ROOT)/usr/share/icons/hicolor/108x108/apps || mkdir -p $(INSTALL_ROOT)/usr/share/icons/hicolor/108x108/apps
-	-$(INSTALL_FILE) /home/sorydev/rechainspace/icons/108x108/com.rechain.space.png $(INSTALL_ROOT)/usr/share/icons/hicolor/108x108/apps/
+	-$(INSTALL_FILE) /home/sorydev/REChainSpaceForAuroraOS/icons/108x108/com.rechain.space.png $(INSTALL_ROOT)/usr/share/icons/hicolor/108x108/apps/
 
 uninstall_icon108x108: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/usr/share/icons/hicolor/108x108/apps/com.rechain.space.png
@@ -485,7 +485,7 @@ uninstall_icon108x108: FORCE
 
 install_icon128x128: first FORCE
 	@test -d $(INSTALL_ROOT)/usr/share/icons/hicolor/128x128/apps || mkdir -p $(INSTALL_ROOT)/usr/share/icons/hicolor/128x128/apps
-	-$(INSTALL_FILE) /home/sorydev/rechainspace/icons/128x128/com.rechain.space.png $(INSTALL_ROOT)/usr/share/icons/hicolor/128x128/apps/
+	-$(INSTALL_FILE) /home/sorydev/REChainSpaceForAuroraOS/icons/128x128/com.rechain.space.png $(INSTALL_ROOT)/usr/share/icons/hicolor/128x128/apps/
 
 uninstall_icon128x128: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/usr/share/icons/hicolor/128x128/apps/com.rechain.space.png
@@ -494,7 +494,7 @@ uninstall_icon128x128: FORCE
 
 install_icon172x172: first FORCE
 	@test -d $(INSTALL_ROOT)/usr/share/icons/hicolor/172x172/apps || mkdir -p $(INSTALL_ROOT)/usr/share/icons/hicolor/172x172/apps
-	-$(INSTALL_FILE) /home/sorydev/rechainspace/icons/172x172/com.rechain.space.png $(INSTALL_ROOT)/usr/share/icons/hicolor/172x172/apps/
+	-$(INSTALL_FILE) /home/sorydev/REChainSpaceForAuroraOS/icons/172x172/com.rechain.space.png $(INSTALL_ROOT)/usr/share/icons/hicolor/172x172/apps/
 
 uninstall_icon172x172: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/usr/share/icons/hicolor/172x172/apps/com.rechain.space.png
@@ -503,9 +503,9 @@ uninstall_icon172x172: FORCE
 
 install_qm: first FORCE
 	@test -d $(INSTALL_ROOT)/usr/share/com.rechain.space/translations || mkdir -p $(INSTALL_ROOT)/usr/share/com.rechain.space/translations
-	lupdate -noobsolete /home/sorydev/rechainspace/src /home/sorydev/rechainspace/qml -ts /home/sorydev/rechainspace/translations/com.rechain.space.ts /home/sorydev/rechainspace/translations/ru.auroraos.ChromiumBrowser.ts /home/sorydev/rechainspace/translations/ru.auroraos.ChromiumBrowser-ru.ts && mkdir -p translations && [ "/home/sorydev/ME" != "/home/sorydev/ME" -a 1 -eq 1 ] && cp -af /home/sorydev/rechainspace/translations/ru.auroraos.ChromiumBrowser.ts /home/sorydev/rechainspace/translations/ru.auroraos.ChromiumBrowser-ru.ts /home/sorydev/rechainspace/translations || : ; [ 1 -eq 1 ] && lrelease -nounfinished /home/sorydev/rechainspace/translations/ru.auroraos.ChromiumBrowser.ts /home/sorydev/rechainspace/translations/ru.auroraos.ChromiumBrowser-ru.ts || :
-	-$(INSTALL_FILE) /home/sorydev/rechainspace/translations/ru.auroraos.ChromiumBrowser.qm $(INSTALL_ROOT)/usr/share/com.rechain.space/translations/
-	-$(INSTALL_FILE) /home/sorydev/rechainspace/translations/ru.auroraos.ChromiumBrowser-ru.qm $(INSTALL_ROOT)/usr/share/com.rechain.space/translations/
+	lupdate -noobsolete /home/sorydev/REChainSpaceForAuroraOS/src /home/sorydev/REChainSpaceForAuroraOS/qml -ts /home/sorydev/REChainSpaceForAuroraOS/translations/com.rechain.space.ts /home/sorydev/REChainSpaceForAuroraOS/translations/ru.auroraos.ChromiumBrowser.ts /home/sorydev/REChainSpaceForAuroraOS/translations/ru.auroraos.ChromiumBrowser-ru.ts && mkdir -p translations && [ "/home/sorydev/REChainSpaceForAuroraOS" != "/home/sorydev/REChainSpaceForAuroraOS" -a 1 -eq 1 ] && cp -af /home/sorydev/REChainSpaceForAuroraOS/translations/ru.auroraos.ChromiumBrowser.ts /home/sorydev/REChainSpaceForAuroraOS/translations/ru.auroraos.ChromiumBrowser-ru.ts /home/sorydev/REChainSpaceForAuroraOS/translations || : ; [ 1 -eq 1 ] && lrelease -nounfinished /home/sorydev/REChainSpaceForAuroraOS/translations/ru.auroraos.ChromiumBrowser.ts /home/sorydev/REChainSpaceForAuroraOS/translations/ru.auroraos.ChromiumBrowser-ru.ts || :
+	-$(INSTALL_FILE) /home/sorydev/REChainSpaceForAuroraOS/translations/ru.auroraos.ChromiumBrowser.qm $(INSTALL_ROOT)/usr/share/com.rechain.space/translations/
+	-$(INSTALL_FILE) /home/sorydev/REChainSpaceForAuroraOS/translations/ru.auroraos.ChromiumBrowser-ru.qm $(INSTALL_ROOT)/usr/share/com.rechain.space/translations/
 
 uninstall_qm: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/usr/share/com.rechain.space/translations/ru.auroraos.ChromiumBrowser-ru.qm
