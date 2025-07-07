@@ -1,0 +1,11 @@
+
+[project]
+name = "REChainSpaceForAuroraOS"
+version = "1.1.0"
+description = "REChain Protocol integration for AuroraOS"
+license = "BSD-3-Clause"
+authors = ["REChain Network Solutions Team"]
+
+[dependencies]
+qt = ">=5.15"
+cmake = ">=3.18"
